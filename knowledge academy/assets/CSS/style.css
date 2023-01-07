@@ -1,0 +1,910 @@
+ @font-face {
+     font-family: 'Quicksand Bold';
+     src: url(../fonts/Quicksand-Bold.ttf);
+ }
+
+ @font-face {
+     font-family: 'Quicksand Regular';
+     src: url(../fonts/Quicksand-Regular.ttf);
+ }
+
+ @font-face {
+     font-family: 'Quicksand Medium';
+     src: url(../fonts/Quicksand-Medium.ttf);
+ }
+
+ @font-face {
+     font-family: 'Quicksand Light';
+     src: url(../fonts/Quicksand-Light.ttf);
+ }
+
+ * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+ }
+
+ html {
+     --mainColor: rgba(19, 38, 64, 1);
+     --secColor: rgba(28, 88, 140, 1);
+     --thirdColor: rgba(39, 75, 89, 1);
+     --fourthColor: rgba(242, 183, 5, 1);
+     --fifthColor: rgb(172, 15, 49);
+     --typingColor: rgba(242, 242, 242, 1);
+     --shadowColor: rgba(27, 26, 26, 0.8);
+     --flagColor: rgba(58, 0, 70, 0.9);
+     --navBarHeight: 9vh;
+     scroll-padding-top: calc(var(--navBarHeight) + 5px);
+     scroll-behavior: smooth;
+ }
+
+ img {
+     width: 100%;
+ }
+
+ .header {
+     height: 100vh;
+ }
+
+ .navBar {
+     overflow: hidden;
+     position: fixed;
+     left: 0%;
+     top: 0%;
+     right: 0;     
+     height: var(--navBarHeight);     
+     z-index: 2;
+     background: var(--mainColor);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+.active {
+    background-color: transparent;
+ }
+
+ .logoArea {
+     width: 30%;
+     height: 80%;
+     float: left;
+     text-align: center;
+     display: flex;
+     justify-content: center;
+     align-items: center;     
+ }
+
+ .logo {
+     width: 15%;   
+ }
+
+ .spacingArea {
+     width: 30%;
+     height: 1px;
+     float: left;
+ }
+
+ .nav {
+     text-align: center;
+     float: left;
+     width: 40%;
+ }
+
+ .list {
+     list-style: none;
+ }
+
+ .listValue {
+     display: inline-block;
+     width: 20%;
+ }
+
+ .listAnchor {
+     text-decoration: none;
+     text-transform: capitalize;
+     font-family: 'Quicksand Bold';
+     font-size: 1.3vw;
+     color: var(--typingColor);
+     text-shadow: 2px 2px 4px var(--shadowColor);     
+ }
+
+ /* start header content */
+
+ .headerContent {
+     height: 100vh;
+     overflow: hidden;
+     background-image: url('../img/cover.jpg');
+     background-position: 14vw;
+     background-size: cover;
+     height: 100vh;
+     background-repeat: no-repeat;
+ }
+
+ .overlay {
+     background: rgba(43, 42, 42, 0.5);
+     height: 100vh;
+ }
+
+ .headerDescriptionDiv {
+     float: left;
+     height: 100vh;
+     width: 30%;
+     margin-left: 5%;
+     background: linear-gradient(to bottom right, rgba(39, 75, 89, 1) 0%, rgba(39, 75, 89, 0.7) 100%);
+     position: relative;
+ }
+
+ .title {
+     width: 100%;
+     margin: auto;
+     margin-top: 40%;
+     text-align: center;
+     color: var(--typingColor);
+     font-size: 2.6vw;
+     font-family: 'Quicksand Bold';
+     text-shadow: 5px 4px 6px var(--shadowColor);
+ }
+
+ .headerParagraph {
+     width: 84%;
+     text-align: justify;
+     margin: auto;
+     margin-top: 12%;
+     color: var(--typingColor);
+     line-height: 2vw;
+     font-size: 1.3vw;
+     font-family: 'Quicksand Medium';
+     text-shadow: 3px 3px 3px var(--shadowColor);
+ }
+
+ .link {
+     display: block;
+     text-align: center;
+     width: 50%;
+     height: 8vh;
+     margin: auto;
+     margin-top: 18vh;
+     padding-top: 2.3vh;
+     background-color: var(--mainColor);
+     border-radius: 50vh;
+     text-decoration: none;
+     text-transform: uppercase;
+     box-shadow: 5px 8px 10px rgba(25, 25, 25, 0.8);
+     text-shadow: 1px 1px 3px var(--shadowColor);
+     color: var(--fourthColor);
+     font-family: 'Quicksand Bold';
+     font-size: 1.3vw;
+ }
+
+ .managed {
+     color: var(--typingColor);
+     font-family: 'Quicksand Medium';
+     font-size: 1vw;
+     letter-spacing: 0.08vw;
+     opacity: 0.8;
+     width: 85%;
+     position: absolute;
+     bottom: 1vh;
+     left: 7%;
+     text-shadow: 3px 3px 3px var(--shadowColor);
+ }
+
+ /* start about */
+
+ .about {
+     height: 70vh;
+     background-color: var(--mainColor);
+     position: relative;
+     z-index: 1;
+ }
+
+ .icoDiv {
+     width: 18%;
+     position: absolute;
+     bottom: -7vh;
+     left: 9%;
+ }
+
+ .icoImg {
+     border-radius: 200vh;
+     border-style: solid;
+     border-width: 0.3vw;
+     border-color: var(--thirdColor);
+     box-shadow: 7px 8px 12px var(--shadowColor);
+ }
+
+ .aboutContent {
+     width: 50%;
+     padding-top: 5%;
+     margin-left: 40%;
+     height: 70vh;
+ }
+
+ .aboutHeader {
+     color: var(--typingColor);
+     text-transform: capitalize;
+     width: 100%;
+     text-align: center;
+     font-size: 3vw;
+     font-family: 'Quicksand Bold';
+     text-shadow: 5px 3px 5px var(--shadowColor);
+ }
+
+ .introParagraph {
+     color: var(--typingColor);
+     margin-top: 10%;
+     font-family: 'Quicksand Medium';
+     font-size: 1.4vw;
+     line-height: 2vw;
+     text-shadow: 5px 4px 3px var(--shadowColor);
+     text-align: justify;
+ }
+
+ .triangle {
+     position: absolute;
+     width: 0;
+     height: 0;
+     border-top: 40vh solid var(--secColor);
+     border-right: 40vh solid transparent;
+     opacity: 0.9;
+ }
+
+ /* start courses */
+
+ /* .courses {
+    background-color: var(--fourthColor);
+    height: 80vh;
+    padding-top: 3%;
+}
+
+.coursesHeaderDiv {
+    position: relative;
+    width: 100%;
+}
+
+.coursesHeader {
+    text-transform: capitalize;
+    text-align: center;
+    width: 19%;
+    margin-left: 65%;
+    font-size: 3vw;
+    font-family: 'Quicksand Bold';
+    color: var(--typingColor);
+    text-shadow: 2px 2px 2px var(--shadowColor);
+}
+
+.coursesHeader::before {
+    content: '';
+    display: block;
+    width: 65%;
+    height: 0.7vh;
+    background: var(--flagColor);
+    position: absolute;
+    top: 55%;
+    left: 0.25%;
+    border-radius: 20vh;
+}
+
+.coursesHeader::after {
+    content: '';
+    display: block;
+    width: 16%;
+    height: 0.7vh;
+    background: var(--flagColor);
+    position: absolute;
+    top: 55%;
+    right: 0.25%;
+    border-radius: 100vh;
+}
+
+.coursesItems {
+    padding-top: 3%;
+    height: 80%;  
+    width: 90%;
+    margin-left: 5.7%; 
+}
+
+.courseItem {
+    width: 21%;
+    height: 90%;
+    float: left;
+    background: var(--thirdColor);
+    position: relative;
+    border-radius: 2vh;
+    box-shadow: 10px -8px 12px var(--shadowColor);    
+}
+
+.spacer{
+    float: left;
+    height: 10px;
+    width: 4.7%;
+}
+
+.flag {
+    position: absolute;
+    left: 7%;
+    top: 5%;
+    height: 0;
+    width: 0;
+    border: 4vh solid transparent;
+    border-top-color: var(--flagColor);
+    border-right-color: var(--flagColor);
+    border-left-color: var(--flagColor);  
+}
+
+.flagTop {
+    width: 8vh;
+    height: 5%;
+    background-color: var(--flagColor);
+    position: absolute;
+    top: 0;
+    left: 7%;
+}
+
+.courseTitle {
+    margin-top: 5%;
+    margin-left: 20%;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'Quicksand Bold';
+    font-weight: bold;
+    font-size: 2vw;
+    color: var(--typingColor);
+    opacity: 0.9;
+    text-shadow: 3px 4px 4px var(--shadowColor);
+}
+
+.coursePlan {
+    margin-top: 15%;
+    margin-left: 16%;
+    line-height: 5vh;
+    color: var(--typingColor);
+    opacity: 0.9;
+    text-shadow: 2px 2px 4px var(--shadowColor);
+    font-size: 1.5vw;
+}
+
+.planSubject {
+    font-family: 'Quicksand Medium';
+}
+
+.cost {
+    text-align: center;
+    font-family: 'Quicksand Bold';
+    font-size: 2vw;
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    color: var(--flagColor);
+    text-shadow: 0px 0px 1px var(--flagColor);
+} */
+
+ .courses {
+     background-color: var(--fourthColor);
+     height: 80vh;
+     padding-top: 2rem;
+ }
+
+ .coursesHeaderDiv {
+     position: relative;
+     width: 100%;
+     height: 8vh;
+ }
+
+ .coursesHeader {
+     text-transform: capitalize;
+     width: fit-content;
+     font-size: 2.5em;
+     font-family: 'Quicksand Bold';
+     color: var(--typingColor);
+     text-shadow: 2px 2px 2px var(--shadowColor);
+     position: absolute;
+     left: 65%;
+ }
+
+ .inline-span {
+     background-color: var(--fourthColor);
+ }
+
+ .before {
+     content: '';
+     display: block;
+     height: 0.7vh;
+     width: 64.5%;
+     background: var(--flagColor);
+     border-radius: 20vh;
+     position: absolute;
+     top: 55%;
+     left: 0.25%;
+ }
+
+ .after {
+     content: '';
+     display: block;
+     width: 236px;
+     height: 0.7vh;
+     background: var(--flagColor);
+     position: absolute;
+     top: 55%;
+     right: 0.25%;
+     border-radius: 100vh;
+ }
+
+ .coursesItems {
+     height: 80%;
+     width: 100%;
+     margin: 1rem auto;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-evenly;
+     align-items: center;
+ }
+
+ .courseItem {
+     width: 18%;
+     height: 90%;
+     background: var(--thirdColor);
+     position: relative;
+     border-radius: 2vh;
+     box-shadow: 10px -8px 12px var(--shadowColor);
+ }
+
+ .flag {
+     position: absolute;
+     left: 7%;
+     top: 5%;
+     height: 0;
+     width: 0;
+     border: 4vh solid transparent;
+     border-top-color: var(--flagColor);
+     border-right-color: var(--flagColor);
+     border-left-color: var(--flagColor);
+ }
+
+ .flagTop {
+     width: 8vh;
+     height: 5%;
+     background-color: var(--flagColor);
+     position: absolute;
+     top: 0;
+     left: 7%;
+ }
+
+ .courseTitle {
+     margin-top: 5%;
+     margin-left: 20%;
+     text-align: center;
+     text-transform: capitalize;
+     font-family: 'Quicksand Bold';
+     font-weight: bold;
+     font-size: 2vw;
+     color: var(--typingColor);
+     opacity: 0.9;
+     text-shadow: 3px 4px 4px var(--shadowColor);
+ }
+
+ .coursePlan {
+     margin-top: 15%;
+     margin-left: 16%;
+     line-height: 5vh;
+     color: var(--typingColor);
+     opacity: 0.9;
+     text-shadow: 2px 2px 4px var(--shadowColor);
+     font-size: 1.5vw;
+ }
+
+ .planSubject {
+     font-family: 'Quicksand Medium';
+ }
+
+ .cost {
+     text-align: center;
+     font-family: 'Quicksand Bold';
+     font-size: 2vw;
+     width: 100%;
+     position: absolute;
+     bottom: 5%;
+     color: var(--flagColor);
+     text-shadow: 0px 0px 1px var(--flagColor);
+ }
+
+ /* start outline */
+
+ .outline {
+     height: 82vh;
+     background-color: var(--thirdColor);
+     padding-top: 3%;
+ }
+
+ .outlineHeaderDiv {
+     position: relative;
+ }
+
+ .outlineHeader {
+     text-transform: capitalize;
+     text-align: center;
+     width: 23%;
+     margin-left: 15%;
+     font-size: 3vw;
+     font-family: 'Quicksand Bold';
+     color: var(--typingColor);
+     text-shadow: 2px 2px 2px var(--shadowColor);
+ }
+
+ .outlineHeader::before {
+     content: '';
+     display: block;
+     width: 14.5%;
+     height: 0.6vh;
+     background: var(--flagColor);
+     border-radius: 20vh;
+     position: absolute;
+     top: 50%;
+     left: 0.25%;
+ }
+
+ .outlineHeader::after {
+     content: '';
+     display: block;
+     width: 61.5%;
+     height: 0.6vh;
+     background: var(--flagColor);
+     position: absolute;
+     top: 50%;
+     right: 0.25%;
+     border-radius: 20vh;
+ }
+
+ .outlineDetails {
+     overflow: auto;
+     width: 100%;
+     height: 85%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .outlineDescriptionDiv {
+     width: 60%;
+     float: left;
+ }
+
+ .outlineDescription {
+     color: var(--typingColor);
+     width: 90%;
+     margin: auto;
+     font-size: 1.5vw;
+     font-family: 'Quicksand Medium';
+     line-height: 5vh;
+     text-shadow: 2px 2px 2px var(--shadowColor);
+     text-align: justify;
+ }
+
+ .outlineListDiv {
+     float: left;
+     width: 28%;
+     background-color: var(--mainColor);
+     height: 90%;
+     border-radius: 2vh;
+     box-shadow: 10px 8px 15px var(--shadowColor);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .outlineList {
+     list-style: none;
+     margin-left: 3%;
+     line-height: 8vh;
+ }
+
+ .outlineItem {
+     color: var(--typingColor);
+     font-family: 'Quicksand Regular';
+     font-size: 1.7vw;
+     text-transform: capitalize;
+     text-shadow: 3px 4px 5px var(--shadowColor);
+ }
+
+ .outlineItem i {
+     color: green;
+     font-size: 1.7vw;
+     font-weight: bold;
+     box-shadow: 4px 3px 5px var(--shadowColor);
+ }
+
+ /* start sign up */
+
+ .signUp {
+     width: 100%;
+     height: 100vh;
+     background: linear-gradient(to bottom right, rgba(39, 75, 89, 1), rgba(39, 75, 89, 0.5));
+     padding-top: 3%;
+     overflow: auto;
+ }
+
+ .signUpFormDiv {
+     background-color: var(--flagColor);
+     width: 30%;
+     height: 95%;
+     margin: auto;
+     border-radius: 2vh;
+     box-shadow: 14px 12px 18px var(--shadowColor);
+     position: relative;
+ }
+
+ .cap {
+     width: 100%;
+     height: 14%;
+     border-top-left-radius: 2vh;
+     border-top-right-radius: 2vh;
+     background: var(--fifthColor);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .signUpHeader {
+     color: var(--typingColor);
+     width: 100%;
+     text-align: center;
+     text-transform: capitalize;
+     font-family: 'Quicksand Bold';
+     font-size: 2.3vw;
+     text-shadow: 3px 4px 6px var(--shadowColor);
+ }
+
+ .signUpFormArea {
+     padding: 6% 10%;
+ }
+
+ .formSpacer {
+     height: 2vh;
+ }
+
+ label {
+     color: var(--typingColor);
+     text-transform: capitalize;
+     margin-left: 3.5%;
+     margin-bottom: 1.5%;
+     text-shadow: 4px 3px 6px var(--shadowColor);
+ }
+
+ label, input, datalist {
+     display: block;
+     font-size: 1.5vw;
+     font-family: 'Quicksand Medium';
+     width: 100%;
+     border-radius: 1vh;
+     border-color: transparent;
+ }
+
+ input {
+     opacity: 0.95;
+     padding: 0 1%;
+ }
+
+ datalist {
+     height: 0;
+ }
+
+ .submit {
+     width: 50%;
+     height: 8%;
+     background-color: var(--fifthColor);
+     color: var(--typingColor);
+     box-shadow: 4px 4px 6px var(--shadowColor);
+     border-radius: 1vh;
+     position: absolute;
+     left: 25%;
+     bottom: 4%;
+     border-width: 0;
+ }
+
+ /* start footer */
+
+ .footer {
+     height: 8vh;
+     background-color: var(--mainColor);
+     overflow: auto;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .socialDiv {
+     width: 15%;
+     margin: auto;
+     overflow: auto;
+     text-align: center;
+ }
+
+ .fab {
+     font-size: 2.3vw;
+     width: 33.33%;
+     float: left;
+     color: var(--fourthColor);
+ }
+
+ @media (orientation: portrait) {
+     .navBar {
+         height: 5vh;
+     }
+     .spacingArea {
+         width: 2%;
+     }
+     .nav {
+         width: 68%;
+         padding-top: 1.75vh;
+     }
+     .listAnchor {
+         font-size: 2.8vw;
+     }
+     .logo {
+         width: 8vw;
+     }
+     .headerDescriptionDiv {
+         width: 80%;
+         margin-left: 10%;
+     }
+     .title {
+         font-size: 7vw;
+     }
+     .headerParagraph {
+         font-size: 4vw;
+         line-height: 4vh;
+         width: 80%;
+     }
+     .link {
+         height: 6vh;
+         font-size: 3.5vw;
+         padding-top: 1.8vh;
+     }
+     .managed {
+         font-size: 3.5vw;
+         width: 80%;
+     }
+     .about {
+         height: 50vh;
+     }
+     .icoDiv {
+         bottom: -2vh;
+         width: 30%;
+         left: 2.5vw
+     }
+     .aboutContent {
+         padding-top: 10%;
+         margin-left: 36%;
+         width: 60%;
+     }
+     .aboutHeader {
+         font-size: 5.5vw;
+     }
+     .introParagraph {
+         font-size: 3vw;
+         line-height: 2.5vh;
+         margin: auto;
+         margin-top: 5%;
+         font-family: 'Quicksand Regular';
+         width: 90%;
+     }
+     .triangle {
+         border-top-width: 15vh;
+         border-right-width: 15vh;
+     }
+     .courses {
+         height: 275vh;
+     }
+     .coursesHeader {
+         font-size: 5.5vw;
+         width: 34%;
+         margin-left: 50%;
+     }
+     .coursesHeader::before {
+         width: 50%;
+         height: 0.5vh;
+         top: 50%;
+     }
+     .coursesHeader::after {
+         width: 15.5%;
+         height: 0.5vh;
+         top: 50%;
+     }
+     .spacer {
+         width: 0;
+         height: 0;
+         float: none;
+     }
+     .courseItem {
+         width: 80%;
+         height: 60vh;
+         margin: 5vh auto;
+         float: none;
+         box-shadow: 10px -8px 12px var(--shadowColor);
+     }
+     .courseTitle {
+         font-size: 8vw;
+         padding-top: 2%;
+     }
+     .coursePlan {
+         font-size: 6vw;
+         line-height: 7vh;
+     }
+     .cost {
+         font-size: 9vw;
+     }
+     .outline {
+         height: 140vh;
+     }
+     .outlineHeader {
+         font-size: 5.5vw;
+         width: 43%;
+     }
+     .outlineHeader::before {
+         height: 0.5vh;
+         top: 50%;
+     }
+     .outlineHeader::after {
+         height: 0.5vh;
+         width: 42%;
+         top: 50%;
+     }
+     .outlineDetails {
+         padding-top: 3vh;
+         height: 130vh;
+     }
+     .outlineDescriptionDiv {
+         width: 95%;
+         height: fit-content;
+         float: none;
+     }
+     .outlineDescription {
+         font-size: 4vw;
+         line-height: 3vh;
+         font-family: 'Quicksand Regular';
+     }
+     .outlineListDiv {
+         float: none;
+         width: 85%;
+         height: fit-content;
+         margin: auto;
+     }
+     .outlineList {
+         margin-top: 10%;
+     }
+     .outlineItem {
+         font-size: 3.5vw;
+         font-family: 'Quicksand Medium';
+     }
+     .outlineItem i {
+         font-size: 4.5vw;
+     }
+     .signUp {
+         height: 95vh;
+     }
+     .signUpFormDiv {
+         width: 80%;
+         height: 85%;
+         margin-top: 8%;
+     }
+     .cap {
+         height: 12%;
+     }
+     .signUpHeader {
+         font-size: 6vw;
+     }
+     label, input, datalist {
+         font-size: 4vw;
+         line-height: 3.5vh;
+     }
+     .footer {
+         height: 4vh;
+     }
+     .socialDiv {
+         padding-top: 1vh;
+         width: 30%;
+     }
+     .fab {
+         font-size: 4vw;
+     }
+ }
